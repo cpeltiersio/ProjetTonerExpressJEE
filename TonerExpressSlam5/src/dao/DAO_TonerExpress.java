@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.*;
 import java.util.*;
+
 import javax.swing.JOptionPane;
 import metier.*;
 
@@ -9,12 +10,12 @@ public class DAO_TonerExpress
 {
 	private static Connection cnt;
 
-	public static Vector <Imprimante> getLesImprimantes()
+	public static Vector<Imprimante> getLesImprimantes()
 	{
-		Vector <Imprimante> lesImp;
 		ResultSet resImp, resType, resCart;
 		TypeImprimante leType;
 		ArrayList <Cartouche> lesCartouches;
+		Vector <Imprimante> lesImp= new Vector<Imprimante>();
 		Statement traitPrincipal, traitement;
 		String texte, ref, desi;
 		boolean encore;
